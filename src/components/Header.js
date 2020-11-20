@@ -3,8 +3,11 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
 
 const Header = () => {
+  const [state, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <Link to="/">
